@@ -29,7 +29,7 @@ public class Proov {
 
         koneminutid = piretiTelefon.lisaKoneminuteid(6);  // tagastab kõneminutite jäägi
 
-        System.out.println(koneminutid);  // kuvab kui palju on kõneminuteid
+        System.out.println("Kõneminuteid on " + koneminutid);  // kuvab kui palju on kõneminuteid
 
         piretitelefon.helista("555111", 5);  // prindi kellele helistati ja kui kaua kõne kestis
 
