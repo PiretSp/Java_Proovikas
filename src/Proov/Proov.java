@@ -11,14 +11,17 @@ package Proov;
  * loo uus javaFX fail, mis kasutab telefoni klassi ja 
  * millele saab kasutaja ette anda oma nime, sisestada numbrid 
  * ja helistada
- * 
  */
 public class Proov {
+
     public static void main(String[] args) {
 
-        String telefoniOmanik = "Piret";
+        String telefoniOmanik;
+        telefoniOmanik = "Piret";
         String telefoniMark = "Samsung";
-        Telefon piretiTelefon = new Telefon(telefoniOmaink, telefoniMark);
+
+        Telefon piretiTelefon = new Telefon(telefoniOmanik, telefoniMark);
+
         piretiTelefon.sisestaNumber("555111");
         piretiTelefon.sisestaNumber("223344");
         piretiTelefon.sisestaNumber("229922");
@@ -28,21 +31,24 @@ public class Proov {
         int koneminutid;
 
         koneminutid = piretiTelefon.lisaKoneminuteid(6);  // tagastab kõneminutite jäägi
-
         System.out.println("Kõneminuteid on " + koneminutid);  // kuvab kui palju on kõneminuteid
 
-        piretitelefon.helista("555111", 5);  // prindi kellele helistati ja kui kaua kõne kestis
+        piretiTelefon.helista("555111", 5);  // prindi kellele helistati ja kui kaua kõne kestis
 
-        piretitelefon.helista("123456", 5); 
+        piretiTelefon.helista("123456", 5);
 
-        System.out.println("Kõneminuteid on " + piretitelefon.lisaKoneminuteid(10)); 
-        piretitelefon.helista("123456", 5);
+        System.out.println("Kõneminuteid on " + piretiTelefon.lisaKoneminuteid(10));
 
-        piretitelefon.eemaldaNumber("555111");
+        piretiTelefon.helista("123456", 5);
 
-        piretiTelefon.kelleTelefon();
+        piretiTelefon.eemaldaNumber("555111");
 
-        System.out.println("See telefon on " + piretiTelefon.mark)
+
+        System.out.println("Selle telefoni omanik on " + piretiTelefon.kelleTelefon());
+
+        System.out.println("See telefon on " + piretiTelefon.mark);
 
     }
+
+
 }
